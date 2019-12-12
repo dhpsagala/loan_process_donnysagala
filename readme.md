@@ -17,30 +17,43 @@ Via .zip file
 - run with this command
 ```bash
 $ go run .\main.go
+$ loan_process_donnysagala.exe
+```
+
+if you are using windows then you can follow this step
+- open terminal/cmd in the app folder
+- type this command
+```bash
+$ go build
+$ 
 ```
 
 # Usage
 - Create current day session limit
 ```bash
-$ create_day_max {limit}
+-> create_day_max {limit}
 ```
 - Create loan for customer
-```
-$ add {id_card_number} {customer_name} {customer_age} {loan_amount}
+```bash
+-> add {id_card_number} {customer_name} {customer_age} {loan_amount}
 ```
 - Check loan status
-```
-$ status {loan_id}
+```bash
+-> status {loan_id}
 ```
 - Generate loan installment by given month range
-```
-$ installment {loan_id} {month_range}
+```bash
+-> installment {loan_id} {month_range}
 ```
 - find every accepted loan id by given amount
-```
-$ find_by_amount_accepted {loan_amount}
+```bash
+-> find_by_amount_accepted {loan_amount}
 ```
 - find every rejected loan id by given amount
+```bash
+-> find_by_amount_rejected {loan_amount}
 ```
-$ find_by_amount_rejected {loan_amount}
+- exit app
+```bash
+-> exit
 ```
