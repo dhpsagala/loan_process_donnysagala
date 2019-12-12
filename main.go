@@ -25,6 +25,8 @@ func main() {
 	storage.Init()
 	storage.BuildScheme()
 
+	fmt.Println(storage.Config)
+
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Welcome to loan system")
 	fmt.Println("-----------------------")
@@ -70,15 +72,15 @@ func add(args ...interface{}) {
 		amount := args[3].(int)
 
 		inValidCount := 0
-		if !(amount >= 1000000 && amount <= 10000000) {
+		if !(amount >= storage.Config.AmountLimit.Min && amount <= storage.Config.AmountLimit.Max) {
 			inValidCount++
 		}
 
-		if (amount % 1000000) != 0 {
+		if (amount % storage.Config.AmountLimit.Multiplier) != 0 {
 			inValidCount++
 		}
 
-		if age < 17 || age > 80 {
+		if age < storage.Config.AgeLimit.Min || age > storage.Config.AgeLimit.Max {
 			inValidCount++
 		}
 

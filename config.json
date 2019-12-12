@@ -1,5 +1,14 @@
 {
     "database": {
         "path" : "loan_process.db"
+    },
+    "ageLimit" : {
+        "min" : 17,
+        "max" : 80
+    },
+    "amountLimit" : {
+        "min" : 1000000,
+        "max" : 10000000,
+        "multiplier" : 1000000
     }
 }
