@@ -25,8 +25,6 @@ func main() {
 	storage.Init()
 	storage.BuildScheme()
 
-	fmt.Println(storage.Config)
-
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Welcome to loan system")
 	fmt.Println("-----------------------")
