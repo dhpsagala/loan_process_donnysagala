@@ -25,7 +25,7 @@ if you are using windows then you can follow this step
 - type this command
 ```bash
 $ go build
-$ 
+$ loan_process_donnysagala.exe
 ```
 
 # Usage
